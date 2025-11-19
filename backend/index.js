@@ -18,7 +18,8 @@ mongoose.connect(process.env.MONGODB_URI).then(()=> console.log("MONGODB IS CONN
 
 
 app.use(cors({
-  origin: 'http://localhost:5173',
+  origin: ['http://localhost:5173',
+  'https://charming-klepon-7da9b0.netlify.app'],
   credentials: true
 }));
 // Routes
