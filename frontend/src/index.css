@@ -1,0 +1,51 @@
+@import "tailwindcss";
+
+
+
+@tailwind components;
+@tailwind utilities;
+
+/* Print styles */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  
+  .print-area {
+    box-shadow: none !important;
+    border: none !important;
+  }
+  
+  body {
+    margin: 0;
+    padding: 20px;
+  }
+  
+  /* Ensure proper page breaks */
+  table {
+    page-break-inside: avoid;
+  }
+  
+  tr {
+    page-break-inside: avoid;
+    page-break-after: auto;
+  }
+  
+  /* Remove background colors for printing */
+  thead {
+    background: #f3f4f6 !important;
+  }
+}
+
+/* Loading spinner animation */
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin {
+  animation: spin 1s linear infinite;
+}
+
+
